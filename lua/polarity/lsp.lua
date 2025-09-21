@@ -8,14 +8,14 @@ function M.setup(opts)
 		capabilities = vim.tbl_deep_extend("force", capabilities, require("blink.cmp").get_lsp_capabilities({}, false))
 	end
 
-	configs.polarity = {
-		default_config = {
-			filetypes = { "polarity" },
-			capabilities = capabilities,
-		}
+	local default_config = {
+		filetypes = { "polarity" },
+		capabilities = capabilities,
 	}
 
-	vim.lsp.config("polarity", opts.server)
+	local lsp_config = vim.tbl_deep_extend("force", default_config, opts.server)
+
+	vim.lsp.config("polarity", lsp_config)
 end
 
 return M

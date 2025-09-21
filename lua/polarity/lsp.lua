@@ -16,6 +16,7 @@ function M.setup(opts)
 	local lsp_config = vim.tbl_deep_extend("force", default_config, opts.server)
 
 	vim.lsp.config("polarity", lsp_config)
+	vim.lsp.enable("polarity")
 end
 
 return M

@@ -4,7 +4,7 @@ if exists("b:current_syntax")
 	finish
 end
 
-syn keyword polKeyword data codata def codef let absurd use infix as
+syn keyword polKeyword data codata def codef let absurd use infix as note
 syn keyword polControlKeyword match comatch
 syn keyword polTypeKeyword Type
 syn keyword polModifierKeyword implicit

@@ -17,8 +17,7 @@ syn match polComment "//.*$"
 syn region polString start='"' end='"' skip='\\.' contains=polStringEscape
 syn region polCharacter start="'" end="'" skip='\\.' contains=polStringEscape
 syn match polStringEscape "\\[ntr\\\"']" contained
-syn match polStringEscape "\\x[0-9a-fA-F]\{2}" contained
-syn match polStringEscape "\\u[0-9a-fA-F]\{4}" contained
+syn match polStringEscape "\\u{[0-9a-fA-F]\{1,6}}" contained
 
 hi def link polKeyword Keyword
 hi def link polControlKeyword Conditional

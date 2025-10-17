@@ -30,19 +30,4 @@ Here's an example for the [lazy.nvim](https://github.com/folke/lazy.nvim) plugin
 ```
 
 ## LSP configuration
-This plugin uses Neovim's builtin `vim.lsp.config` API. Therefore, version 0.11+ is needed.
-
-To use the old `nvim-lspconfig`, you can target the `legacy-lsp` branch.
-<details>
-<summary>lazy.nvim example</summary>
-<br>
-
-```lua
-{
-    "rabuu/polarity.nvim",
-    ft = "polarity",
-    branch = "legacy-lsp",
-}
-```
-
-</details>
+This plugin uses Neovim's builtin `vim.lsp.config` API. Therefore, Neovim version 0.11+ is needed.

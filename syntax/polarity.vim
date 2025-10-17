@@ -14,7 +14,7 @@ syn match polPunctuation "[;,:.]"
 
 syn match polComment "//.*$"
 
-syn region polString start='"' end='"' skip='\\.' contains=polStringEscape oneline
+syn region polString start='"' end='"' skip='\\.' contains=polStringEscape
 syn match polStringEscape "\\[ntr\\\"']" contained
 syn match polStringEscape "\\x[0-9a-fA-F]\{2}" contained
 syn match polStringEscape "\\u[0-9a-fA-F]\{4}" contained
